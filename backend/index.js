@@ -7,10 +7,9 @@ const MongoClient = mongodb.MongoClient
 const port = process.env.PORT || 8000
 
 MongoClient.connect(
-        process.env.VEHICLES_DB_URI,
+        process.env.VIMAPP_DB_URI,
         {
-                poolSize: 50,
-                wtimeout: 2500,
+                wtimeoutMS: 2500,
                 useNewUrlParser: true
         })
 .catch(err => {
